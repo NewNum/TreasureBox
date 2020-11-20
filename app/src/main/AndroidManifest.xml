@@ -10,6 +10,25 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
+            android:name=".view.vplm.carousel.CarouselLayoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".view.vplm.circle.CircleLayoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".view.vplm.circlescale.CircleScaleLayoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".view.vplm.gallery.GalleryLayoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".view.vplm.rotate.RotateLayoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity
+            android:name=".view.vplm.scale.ScaleLayoutActivity"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".view.vplm.VPLMActivity"/>
+        <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
             <intent-filter>

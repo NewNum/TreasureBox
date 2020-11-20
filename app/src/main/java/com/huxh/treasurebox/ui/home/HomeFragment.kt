@@ -1,5 +1,6 @@
 package com.huxh.treasurebox.ui.home
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
@@ -9,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProviders
 import com.huxh.treasurebox.R
+import com.huxh.treasurebox.view.vplm.VPLMActivity
 
 class HomeFragment : Fragment() {
 
@@ -26,6 +28,9 @@ class HomeFragment : Fragment() {
         homeViewModel.text.observe(viewLifecycleOwner, Observer {
             textView.text = it
         })
+        textView.setOnClickListener {
+            startActivity(Intent(requireContext(),VPLMActivity::class.java))
+        }
         return root
     }
 }

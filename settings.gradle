@@ -1,2 +1,4 @@
+include ':view'
+include ':viewpagerlayoutmanager'
 include ':app'
 rootProject.name = "TreasureBox"

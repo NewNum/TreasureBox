@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 class HomeViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
+        value = "ViewPagerLayoutManager \n https://github.com/leochuan/ViewPagerLayoutManager"
     }
     val text: LiveData<String> = _text
 }
