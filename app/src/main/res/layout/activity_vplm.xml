@@ -9,6 +9,11 @@
     android:paddingRight="16dp"
     tools:context=".view.vplm.VPLMActivity">
 
+    <View
+        android:id="@+id/vStatus"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp" />
+
     <Button
         android:id="@+id/bt_circle"
         android:layout_width="match_parent"

@@ -1,19 +1,16 @@
 package com.huxh.treasurebox.view.vplm;
 
-import android.os.Bundle;
-
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
-import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
-
 import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Toast;
 
+import androidx.recyclerview.widget.RecyclerView;
+import androidx.vectordrawable.graphics.drawable.VectorDrawableCompat;
+
 import com.huxh.treasurebox.R;
+import com.huxh.treasurebox.baselib.base.activity.BaseActivity;
 import com.leochuan.ScrollHelper;
 import com.leochuan.ViewPagerLayoutManager;
 
@@ -23,19 +20,22 @@ import com.leochuan.ViewPagerLayoutManager;
  */
 
 public abstract class VPLMBaseActivity<V extends ViewPagerLayoutManager, S extends SettingPopUpWindow>
-        extends AppCompatActivity {
+        extends BaseActivity {
     private RecyclerView recyclerView;
     private V viewPagerLayoutManager;
     private S settingPopUpWindow;
+
+    @Override
+    public int layoutId() {
+        return R.layout.activity_base;
+    }
 
     protected abstract V createLayoutManager();
 
     protected abstract S createSettingPopUpWindow();
 
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_base);
+    public void onViewCreate() {
         setTitle(getIntent().getCharSequenceExtra(VPLMActivity.INTENT_TITLE));
         recyclerView = findViewById(R.id.recycler);
         viewPagerLayoutManager = createLayoutManager();

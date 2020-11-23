@@ -5,6 +5,7 @@ import android.view.View
 import androidx.fragment.app.viewModels
 import com.huxh.treasurebox.R
 import com.huxh.treasurebox.baselib.base.fragment.BaseViewModelFragment
+import kotlinx.android.synthetic.main.fragment_home.*
 
 class HomeFragment : BaseViewModelFragment() {
 
@@ -15,5 +16,12 @@ class HomeFragment : BaseViewModelFragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        viewModel.widgets.observe(viewLifecycleOwner) {
+            rvHome.adapter = HomeAdapter(it).apply {
+                onItemClickListener = { data, _, _ ->
+                    startActivity(data.baseClass)
+                }
+            }
+        }
     }
 }
