@@ -1,36 +1,19 @@
 package com.huxh.treasurebox.ui.home
 
-import android.content.Intent
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.TextView
-import androidx.fragment.app.Fragment
-import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
+import androidx.fragment.app.viewModels
 import com.huxh.treasurebox.R
-import com.huxh.treasurebox.view.vplm.VPLMActivity
+import com.huxh.treasurebox.baselib.base.fragment.BaseViewModelFragment
 
-class HomeFragment : Fragment() {
+class HomeFragment : BaseViewModelFragment() {
 
-    private lateinit var homeViewModel: HomeViewModel
+    override val viewModel by viewModels<HomeViewModel>()
 
-    override fun onCreateView(
-            inflater: LayoutInflater,
-            container: ViewGroup?,
-            savedInstanceState: Bundle?
-    ): View? {
-        homeViewModel =
-                ViewModelProviders.of(this).get(HomeViewModel::class.java)
-        val root = inflater.inflate(R.layout.fragment_home, container, false)
-        val textView: TextView = root.findViewById(R.id.text_home)
-        homeViewModel.text.observe(viewLifecycleOwner, Observer {
-            textView.text = it
-        })
-        textView.setOnClickListener {
-            startActivity(Intent(requireContext(),VPLMActivity::class.java))
-        }
-        return root
+    override fun layoutId(): Int {
+        return R.layout.fragment_home
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
     }
 }

@@ -4,10 +4,14 @@ import android.app.Activity
 import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.appcompat.app.AppCompatActivity
 import com.huxh.treasurebox.baselib.dialog.LoadingDialog
 import com.gyf.immersionbar.ImmersionBar
+import com.huxh.treasurebox.R
+import com.huxh.treasurebox.baselib.utils.getStatusBarHeight
+import kotlinx.android.synthetic.main.activity_web.view.*
 
 
 abstract class BaseActivity : AppCompatActivity() {
@@ -25,6 +29,7 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     open fun initStatusBar() {
+        findViewById<View>(R.id.vStatus)?.layoutParams?.height = getStatusBarHeight(this)
         ImmersionBar.with(this)
 //            .transparentStatusBar() //透明状态栏，不写默认透明色
 //            .transparentNavigationBar() //透明导航栏，不写默认黑色(设置此方法，fullScreen()方法自动为true)

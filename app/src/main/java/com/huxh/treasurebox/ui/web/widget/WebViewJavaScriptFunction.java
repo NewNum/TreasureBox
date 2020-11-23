@@ -1,4 +1,4 @@
-package com.huxh.treasurebox.widget;
+package com.huxh.treasurebox.ui.web.widget;
 
 public interface WebViewJavaScriptFunction {
 

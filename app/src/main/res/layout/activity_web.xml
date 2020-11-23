@@ -7,11 +7,12 @@
     android:orientation="vertical"
     tools:context=".ui.web.WebActivity">
 
-    <com.huxh.treasurebox.widget.ToolbarWithStatusBar
+    <include layout="@layout/view_status_bar" />
+
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:rightSrc="@drawable/ic_close" />
+        android:layout_height="wrap_content" />
 
     <ProgressBar
         android:id="@+id/pbWeb"
