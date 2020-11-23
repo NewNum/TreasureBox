@@ -38,5 +38,7 @@
     <string name="left_on_top">Left On Top</string>
     <string name="right_on_top">Right On Top</string>
     <string name="center_on_top">Center On Top</string>
-    <string name="my_layout_manager">My Layout Manager</string>
+
+    <string name="network_error">Network error</string>
+    <string name="a_little_problem">There are some minor issues</string>
 </resources>

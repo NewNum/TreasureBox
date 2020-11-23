@@ -1,3 +1,5 @@
+include ':zxinglite'
+include ':permission'
 include ':view'
 include ':viewpagerlayoutmanager'
 include ':app'

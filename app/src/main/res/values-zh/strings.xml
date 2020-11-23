@@ -38,6 +38,7 @@
     <string name="right_on_top">靠右在上</string>
     <string name="center_on_top">靠中间在上</string>
     <string name="rotate_from_edge">绕底边旋转</string>
-    <string name="my_layout_manager">自定义</string>
 
+    <string name="network_error">网络异常</string>
+    <string name="a_little_problem">有一些小问题</string>
 </resources>

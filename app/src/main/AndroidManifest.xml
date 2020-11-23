@@ -2,13 +2,21 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.huxh.treasurebox">
 
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_LOGS" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
+        android:name=".baselib.App"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ui.web.WebActivity"></activity>
         <activity
             android:name=".view.vplm.carousel.CarouselLayoutActivity"
             android:parentActivityName=".MainActivity" />
@@ -27,7 +35,7 @@
         <activity
             android:name=".view.vplm.scale.ScaleLayoutActivity"
             android:parentActivityName=".MainActivity" />
-        <activity android:name=".view.vplm.VPLMActivity"/>
+        <activity android:name=".view.vplm.VPLMActivity" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name">
