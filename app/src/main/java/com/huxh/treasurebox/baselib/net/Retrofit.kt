@@ -16,7 +16,7 @@ import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
 
-private const val BASE_URL = "https://api.e-wallet.cc/"
+private const val BASE_URL = "https://www.wanandroid.com"
 private const val TIME_OUT = 30L
 
 val httpLoggingInterceptor = HttpLoggingInterceptor(object : HttpLoggingInterceptor.Logger {
