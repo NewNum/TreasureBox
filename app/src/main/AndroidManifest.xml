@@ -16,7 +16,7 @@
         android:name=".baselib.App"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ui.web.WebActivity"></activity>
+        <activity android:name=".ui.web.WebActivity" />
         <activity
             android:name=".view.vplm.carousel.CarouselLayoutActivity"
             android:parentActivityName=".MainActivity" />

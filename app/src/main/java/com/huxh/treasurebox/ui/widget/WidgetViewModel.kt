@@ -1,11 +1,11 @@
-package com.huxh.treasurebox.ui.home
+package com.huxh.treasurebox.ui.widget
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.huxh.treasurebox.baselib.base.viewmodel.BaseViewModel
 import com.huxh.treasurebox.view.vplm.VPLMActivity
 
-class HomeViewModel : BaseViewModel() {
+class WidgetViewModel : BaseViewModel() {
 
     private val _widgets = MutableLiveData<List<WidgetInfo>>().apply {
         value = listOf(

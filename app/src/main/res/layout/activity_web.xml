@@ -12,7 +12,9 @@
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        app:collapseIcon="@drawable/ic_more"
+        app:navigationIcon="@drawable/ic_back" />
 
     <ProgressBar
         android:id="@+id/pbWeb"

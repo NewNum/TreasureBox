@@ -1,4 +1,4 @@
-package com.huxh.treasurebox.ui.home
+package com.huxh.treasurebox.ui.widget
 
 import android.app.Activity
 

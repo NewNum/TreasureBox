@@ -23,9 +23,9 @@ class WebActivity : BaseActivity() {
     }
 
     private fun initListener() {
-//        toolbar.setOnBackClickListener {
-//            onBackPressed()
-//        }
+        toolbar.setNavigationOnClickListener {
+            onBackPressed()
+        }
 //        toolbar.setOnRightImageClickListener {
 //            super.onBackPressed()
 //        }

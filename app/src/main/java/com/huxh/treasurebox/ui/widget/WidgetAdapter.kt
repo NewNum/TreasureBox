@@ -1,4 +1,4 @@
-package com.huxh.treasurebox.ui.home
+package com.huxh.treasurebox.ui.widget
 
 import android.view.View
 import android.view.ViewGroup
@@ -7,7 +7,7 @@ import com.huxh.treasurebox.R
 import com.huxh.treasurebox.baselib.utils.RecyclerViewHolder
 import kotlinx.android.synthetic.main.item_widget.*
 
-class HomeAdapter(private val list: List<WidgetInfo>) : RecyclerView.Adapter<RecyclerViewHolder>() {
+class WidgetAdapter(private val list: List<WidgetInfo>) : RecyclerView.Adapter<RecyclerViewHolder>() {
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerViewHolder {
         return RecyclerViewHolder.Companion.createViewHolder(parent, R.layout.item_widget)
     }
@@ -20,6 +20,9 @@ class HomeAdapter(private val list: List<WidgetInfo>) : RecyclerView.Adapter<Rec
         holder.itemView.setOnClickListener {
             onItemClickListener?.invoke(widgetInfo,it,holder.adapterPosition)
         }
+        holder.tvUrl.setOnClickListener {
+            onItemUrlClickListener?.invoke(widgetInfo,it,holder.adapterPosition)
+        }
     }
 
     override fun getItemCount(): Int {
@@ -27,4 +30,6 @@ class HomeAdapter(private val list: List<WidgetInfo>) : RecyclerView.Adapter<Rec
     }
 
     var onItemClickListener: ((WidgetInfo, View, Int) -> Unit)? = null
+
+    var onItemUrlClickListener: ((WidgetInfo, View, Int) -> Unit)? = null
 }
